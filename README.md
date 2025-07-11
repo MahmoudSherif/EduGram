@@ -144,6 +144,25 @@ This website is designed to help beginners:
 - Works completely offline
 - Reset progress by clearing browser data if needed
 
+## 📂 Additional Project – EduMini
+
+In addition to **CodeAcademy Mini**, this repository now also includes a super-lightweight static variant called **EduMini**.  You can find the source in the `edumini/` directory:
+
+```bash
+edumini/
+├── index.html   # main page
+├── styles.css   # styling
+└── script.js    # small helper script
+```
+
+EduMini demonstrates how the same educational content can be delivered with **just three files** (HTML, CSS and JS) and **no build step**.  Open `edumini/index.html` directly in your browser or serve the folder with any static server:
+
+```bash
+python3 -m http.server -d edumini 8080
+```
+
+Then visit `http://localhost:8080`.
+
 ---
 
 **Happy Learning!** 🎉 Start your programming journey today with CodeAcademy Mini!
