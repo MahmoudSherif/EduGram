@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeAcademy Mini - Learn Programming Fundamentals</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <h1>CodeAcademy Mini</h1>
+            </div>
+            <nav class="nav">
+                <button class="nav-btn" id="homeBtn">Home</button>
+                <button class="nav-btn" id="coursesBtn">Courses</button>
+                <button class="nav-btn" id="progressBtn">Progress</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Home Section -->
+        <section class="section active" id="home">
+            <div class="container">
+                <div class="hero">
+                    <div class="hero-content">
+                        <h2>Learn Programming Fundamentals</h2>
+                        <p>Master the basics of programming with interactive lessons, hands-on exercises, and instant feedback.</p>
+                        <button class="cta-btn" id="startLearning">Start Learning Now</button>
+                    </div>
+                    <div class="hero-image">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                </div>
+                
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-play-circle"></i>
+                        <h3>Interactive Lessons</h3>
+                        <p>Learn by doing with hands-on coding exercises</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Track Progress</h3>
+                        <p>Monitor your learning journey and achievements</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <h3>Self-Paced</h3>
+                        <p>Learn at your own speed, anytime, anywhere</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section class="section" id="courses">
+            <div class="container">
+                <h2>Programming Courses</h2>
+                <div class="courses-grid">
+                    <div class="course-card" data-course="variables">
+                        <div class="course-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Variables & Data Types</h3>
+                        <p>Learn how to store and manipulate data in programming</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                        <button class="course-btn">Start Course</button>
+                    </div>
+
+                    <div class="course-card" data-course="control-flow">
+                        <div class="course-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <h3>Control Flow</h3>
+                        <p>Master conditional statements and loops</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                        <button class="course-btn">Start Course</button>
+                    </div>
+
+                    <div class="course-card" data-course="functions">
+                        <div class="course-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Functions</h3>
+                        <p>Create reusable code blocks and organize your programs</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                        <button class="course-btn">Start Course</button>
+                    </div>
+
+                    <div class="course-card" data-course="algorithms">
+                        <div class="course-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Basic Algorithms</h3>
+                        <p>Understand fundamental problem-solving techniques</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                        <button class="course-btn">Start Course</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Section -->
+        <section class="section" id="progress">
+            <div class="container">
+                <h2>Your Progress</h2>
+                <div class="progress-dashboard">
+                    <div class="progress-card">
+                        <h3>Overall Progress</h3>
+                        <div class="circular-progress">
+                            <svg class="progress-ring" width="120" height="120">
+                                <circle class="progress-ring-background" cx="60" cy="60" r="50"></circle>
+                                <circle class="progress-ring-progress" cx="60" cy="60" r="50"></circle>
+                            </svg>
+                            <div class="progress-percentage">0%</div>
+                        </div>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <i class="fas fa-book"></i>
+                            <div>
+                                <h4 id="lessonsCompleted">0</h4>
+                                <p>Lessons Completed</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-quiz"></i>
+                            <div>
+                                <h4 id="quizzesPassed">0</h4>
+                                <p>Quizzes Passed</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-fire"></i>
+                            <div>
+                                <h4 id="streakDays">0</h4>
+                                <p>Day Streak</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lesson Modal -->
+        <div class="modal" id="lessonModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="lessonTitle">Lesson Title</h2>
+                    <button class="close-btn" id="closeModal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="lesson-content" id="lessonContent">
+                        <!-- Lesson content will be loaded here -->
+                    </div>
+                    <div class="lesson-actions">
+                        <button class="btn btn-secondary" id="prevBtn">Previous</button>
+                        <button class="btn btn-primary" id="nextBtn">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Modal -->
+        <div class="modal" id="quizModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="quizTitle">Quiz</h2>
+                    <button class="close-btn" id="closeQuizModal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="quiz-content" id="quizContent">
+                        <!-- Quiz content will be loaded here -->
+                    </div>
+                    <div class="quiz-actions">
+                        <button class="btn btn-primary" id="submitQuiz">Submit Answer</button>
+                        <button class="btn btn-secondary" id="nextQuestion" style="display: none;">Next Question</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 CodeAcademy Mini. Built for learning programming fundamentals.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
