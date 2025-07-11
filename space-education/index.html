@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Explorer - Learn About Our Universe</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">Space Explorer</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#planets" class="nav-link">Planets</a></li>
+                <li><a href="#missions" class="nav-link">Missions</a></li>
+                <li><a href="#quiz" class="nav-link">Quiz</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="stars"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Explore the Universe</h1>
+            <p class="hero-subtitle">Journey through space and discover the wonders of our solar system</p>
+            <button class="cta-button" onclick="scrollToSection('planets')">Start Exploring</button>
+        </div>
+        <div class="planet-animation"></div>
+    </section>
+
+    <!-- Planets Section -->
+    <section id="planets" class="planets-section">
+        <div class="container">
+            <h2 class="section-title">Our Solar System</h2>
+            <div class="planets-grid">
+                <div class="planet-card" data-planet="mercury">
+                    <div class="planet-icon">☿</div>
+                    <h3>Mercury</h3>
+                    <p>The smallest planet in our solar system and closest to the Sun.</p>
+                    <div class="planet-facts">
+                        <span>Distance from Sun: 57.9 million km</span>
+                        <span>Day Length: 59 Earth days</span>
+                    </div>
+                </div>
+                <div class="planet-card" data-planet="venus">
+                    <div class="planet-icon">♀</div>
+                    <h3>Venus</h3>
+                    <p>The hottest planet in our solar system with a thick atmosphere.</p>
+                    <div class="planet-facts">
+                        <span>Distance from Sun: 108.2 million km</span>
+                        <span>Day Length: 243 Earth days</span>
+                    </div>
+                </div>
+                <div class="planet-card" data-planet="earth">
+                    <div class="planet-icon">🌍</div>
+                    <h3>Earth</h3>
+                    <p>Our home planet, the only known planet with life.</p>
+                    <div class="planet-facts">
+                        <span>Distance from Sun: 149.6 million km</span>
+                        <span>Day Length: 24 hours</span>
+                    </div>
+                </div>
+                <div class="planet-card" data-planet="mars">
+                    <div class="planet-icon">♂</div>
+                    <h3>Mars</h3>
+                    <p>The red planet, known for its rust-colored appearance.</p>
+                    <div class="planet-facts">
+                        <span>Distance from Sun: 227.9 million km</span>
+                        <span>Day Length: 24.6 hours</span>
+                    </div>
+                </div>
+                <div class="planet-card" data-planet="jupiter">
+                    <div class="planet-icon">♃</div>
+                    <h3>Jupiter</h3>
+                    <p>The largest planet in our solar system with a Great Red Spot.</p>
+                    <div class="planet-facts">
+                        <span>Distance from Sun: 778.5 million km</span>
+                        <span>Day Length: 10 hours</span>
+                    </div>
+                </div>
+                <div class="planet-card" data-planet="saturn">
+                    <div class="planet-icon">♄</div>
+                    <h3>Saturn</h3>
+                    <p>Famous for its spectacular ring system made of ice and rock.</p>
+                    <div class="planet-facts">
+                        <span>Distance from Sun: 1.4 billion km</span>
+                        <span>Day Length: 10.7 hours</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Missions Section -->
+    <section id="missions" class="missions-section">
+        <div class="container">
+            <h2 class="section-title">Space Missions</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">1969</div>
+                    <div class="timeline-content">
+                        <h3>Apollo 11</h3>
+                        <p>First humans land on the Moon. Neil Armstrong and Buzz Aldrin make history.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1977</div>
+                    <div class="timeline-content">
+                        <h3>Voyager 1 & 2</h3>
+                        <p>Twin spacecraft launched to explore the outer planets of our solar system.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1990</div>
+                    <div class="timeline-content">
+                        <h3>Hubble Space Telescope</h3>
+                        <p>Revolutionary telescope providing stunning images of deep space.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h3>Mars Perseverance Rover</h3>
+                        <p>Advanced rover searching for signs of ancient life on Mars.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="quiz-section">
+        <div class="container">
+            <h2 class="section-title">Test Your Knowledge</h2>
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h3 id="question">Loading question...</h3>
+                    <div class="quiz-progress">
+                        <span id="question-number">1</span> / <span id="total-questions">5</span>
+                    </div>
+                </div>
+                <div class="quiz-options" id="options">
+                    <!-- Options will be dynamically generated -->
+                </div>
+                <button class="next-button" id="next-btn" onclick="nextQuestion()">Next Question</button>
+                <div class="quiz-result" id="result"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Facts Ticker -->
+    <div class="facts-ticker">
+        <div class="facts-content">
+            <span>🌟 Did you know? One day on Venus is longer than its year!</span>
+            <span>🌟 The Sun accounts for 99.86% of the mass in our solar system!</span>
+            <span>🌟 Jupiter has 79 known moons!</span>
+            <span>🌟 Saturn's rings are made primarily of ice particles!</span>
+            <span>🌟 Mars has the largest volcano in the solar system - Olympus Mons!</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Space Explorer. Educational content for curious minds.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook">📘</a>
+                <a href="#" aria-label="Twitter">🐦</a>
+                <a href="#" aria-label="Instagram">📷</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
