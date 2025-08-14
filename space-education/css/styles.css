@@ -48,7 +48,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -78,10 +78,15 @@ body {
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid transparent;
 }
 
 .nav-link:hover {
     color: var(--highlight-color);
+    background: rgba(233, 69, 96, 0.1);
+    border-color: var(--highlight-color);
 }
 
 .nav-link::after {
@@ -127,13 +132,14 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     overflow: hidden;
+    padding-top: 80px;
 }
 
 .stars {
